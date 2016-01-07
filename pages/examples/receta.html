@@ -23,7 +23,7 @@
 
         <div class="form-box" id="login-box">
             <div class="header">Nueva Receta</div>
-            <form action="../../index.html" method="post">
+            <form action="" method="post">
                 <div class="body bg-gray">
                     <div class="form-group">
                         <input type="text" name="patente" class="form-control" placeholder="Nombre del Medicamento"/>
@@ -109,19 +109,43 @@
                     </div> 
                     <div class="form-group">
                         <textarea cols="50" rows="4" name="notes" class="form-control" placeholder="Notas"/></textarea>
-                    </div> 
+                    </div>
+
+                    <!--Doctor-->
+                  
+         <!--       <div class="form-group">
+        <sql:query var="res" dataSource="${con}">
+            SELECT *
+            FROM Estado_Civil;
+        </sql:query>
+ <li id="list_item4" >
+    <label class="description" for="element_4">Doctor que lo receto</label>
+    <div id="list_item">
+        <div>
+    <select class="element select medium" id="element_4" name="estado_civil"> 
+      <option value="" selected="selected"></option>
+            <c:forEach var="est" items="${res.rows}">
+                <option value="${est.idEstadoC}"><c:out value="${est.estado_civil}"/></option>
+            </c:forEach>
+    </select>  
+    </div> 
+    </li>
+</div>
+-->
+     
                 </div>
                 <div class="footer">   
+                   
+                    <button type="submit" class="btn bg-olive btn-block" value="next">Agregar otro Medicamento</button>
 
-                    <button type="submit" class="btn bg-olive btn-block">Agregar otro Medicamento</button>
 
-
-                    <button type="submit" class="btn bg-olive btn-block">Enviar</button>
+                    <button type="submit" class="btn bg-olive btn-block" value="send" >Enviar</button>
                 </div>
             </form>
 
            
         </div>
+<c:if test= "${pageContext.request.method=='POST'}">
 
 
         <!-- jQuery 2.0.2 -->
