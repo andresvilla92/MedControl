@@ -164,13 +164,14 @@
                 </section>
                 <!-- /.sidebar -->
             </aside>
+            
             <!-- Right side column. Contains the navbar and content of the page -->
             <aside class="right-side">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
                         Francisco Omaña
-                        <small>Control de Medicamentos</small>
+                        <small>Historial</small>
                     </h1>
                     <ol class="breadcrumb">
                         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -181,22 +182,155 @@
                 <!-- Main content -->
                 <section class="content">
                     <!-- top row -->
-                    <div class="row">
-                        <div class="col-xs-12 connectedSortable">
-                        </div><!-- /.col -->
+                <div class="row">
+                        <div class="col-xs-12">
+                            <div class="box">
+                                <div class="box-header">
+                                    <h3 class="box-title"> Historial</h3>
+                                    <div class="box-tools">
+                                        <div class="input-group">
+                                            <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Buscar"/>
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><!-- /.box-header -->
+                                <div class="box-body table-responsive no-padding">
+                                    <table class="table table-hover">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Medicamento</th>
+                                            <th> Activo(s)</th>
+                                            <th>Lapso</th>
+                                            <th>Estatus</th>
+                                            <th>Dosis</th>
+                                            <th>Doctor</th>
+                                            <th>Notas</th>
+                                        </tr>
+                                       <tr>
+                                            <td>1</td>
+                                            <td>Lantus</td>
+                                            <td>Insulina glargine </td>
+                                            <td>11/07/2000---13/12/2001</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 inyección por las mañanas</td>
+                                            <td> Rafael Dominguez</td>
+                                            <td>Mantener el control de azúcar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Lanoxin</td>
+                                            <td>Digoxina</td>
+                                            <td>03/01/2016---03/01/2017</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 pastilla cada 24 hrs</td>
+                                            <td> Hemil Langmaark</td>
+                                            <td>No tomar con el estomago vacío</td>
+                                        </tr>
+                                         <tr>
+                                            <td>3</td>
+                                             <td>Tempra</td>
+                                            <td>Paracetamol</td>
+                                            <td>12/09/2015---14/04/2016</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 pastilla cada 24 hrs</td>
+                                             <td>Linda Cabeza de Vaca</td>
+                                            <td> </td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Neomelubrina</td>
+                                            <td> Metamizol Sódico</td>
+                                            <td>03/01/2016---10/03/2016</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 pastilla cada 12 hrs</td>
+                                            <td>Oskar Lamembert</td>
+                                            <td>Disminuir fiebre</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Advil</td>
+                                            <td>Ibuprofeno</td>
+                                            <td>03/01/2014---28/02/2016</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 pastilla cada 24 hrs</td>
+                                            <td>Nigel McAffe</td>
+                                            <td>No tomar con el estomago vacío</td>
+                                        </tr>
+                                        
+                                        <tr>
+                                            <td>6</td>
+                                            <td>Amoxil</td>
+                                            <td> Amoxicilina</td>
+                                            <td>03/01/2015---13/02/2016</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 pastilla cada 8 hrs</td>
+                                            <td> Agripina Seuss</td>
+                                            <td>No tomar con el estomago vacío</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>Ambrox</td>
+                                            <td>Neoproxina</td>
+                                            <td>05/01/2016---04/02/2016</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 pastilla cada 24 hrs</td>
+                                            <td>Hugh House</td>
+                                            <td>Tomar con el estomago vacío</td>
+                                        </tr>
+										<tr>
+                                            <td>8</td>
+                                            <td>Dolocatil</td>
+                                            <td>Codeina</td>
+                                            <td>03/01/2016---27/01/2016</td>
+                                            <td><span class="label label-success">Vigente</span></td>
+                                            <td>1 pastilla cada 24 hrs</td>
+                                            <td> Viktor Romannov</td>
+                                            <td> </td>
+                                        </tr>
+										<tr>
+                                            <td>9</td>
+                                            <td>Candiflux</td>
+                                            <td>Fluconazol</td>
+                                            <td>03/01/2016---08/01/2016</td>
+                                            <td><span class="label label-warning">Ultimo Día</span></td>
+                                            <td>1 pastilla cada 12 hrs</td>
+                                            <td>Loraine Schneider</td>
+                                            <td>No tomar con el estomago vacío</td>
+                                        </tr>
+
+                                         <tr>
+                                            <td>10</td>
+                                            <td>Genoprazol</td>
+                                             <td>Omeprazol</td>
+                                            <td>11/07/2015----11/08/2015</td>
+                                            <td><span class="label label-danger">Terminado</span></td>
+                                            <td>1 pastilla en la mañana y otra en la noche durante un mes</td>
+                                             <td>Carlos del Monte</td>
+                                            <td>Para la gastritis</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>Durak</td>
+                                            <td>Ranitidina</td>
+                                            <td>21/05/2015-- 29/05/2015</td>
+                                            <td><span class="label label-danger">Terminado</span></td>
+                                            <td>1 pastilla cada 8 hrs por 3 dias, después cada 12 hrs por 3 dias</td>
+                                            <td> Poe Seymour</td>
+                                            <td>Infección estomacal</td>
+                                        </tr>
+                                        
+                                    </table>
+                                </div><!-- /.box-body -->
+                            </div><!-- /.box -->
+                        </div>
                     </div>
                     <!-- /.row -->
+                </section>
 
-                    <!-- Main row -->
-                    <div class="row">
-                        <!-- Left col -->
-                        <section class="col-lg-6 connectedSortable">
-
-                        </section><!-- /.Left col -->
-                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                        <section class="col-lg-6 connectedSortable">
-
-                </section><!-- /.content -->
+                    
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
 
