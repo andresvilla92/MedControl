@@ -24,6 +24,7 @@
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
         <!-- Personal stylesheet -->
         <link href="css/usuario.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="js/calendar.js"></script>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -183,13 +184,12 @@
                     <!-- top row -->
                     <div class="row">
                         <div class="col-xs-12 connectedSortable">
-                            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus"></i> Nueva Receta</button>
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Nueva Receta  &nbsp; <i class="fa fa-plus"></i></button>
                             <!--Modal-->
                             <div id="myModal" class="modal fade" role="dialog">
                                 <div class="modal-dialog">}
                                     <!--Modal content-->
                                     <div class="modal-content">
-                                            <div class="form-box" id="login-box">
                                                 <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                                 <div class="header">Nueva Receta</div>
@@ -222,9 +222,9 @@
     </span>
   
     <span id="calendar_4">
-      <img id="cal_img_4" class="datepicker" src="../../img/calendar.gif" alt="Pick a date.">  
+      <img id="cal_img_4" class="datepicker" src="img/calendar.gif" alt="Pick a date.">  
     </span>
-    <script type="text/javascript">
+   <script type="text/javascript">
       Calendar.setup({
       inputField   : "element_4_3",
       baseField    : "element_4",
@@ -252,7 +252,7 @@
     </span>
   
     <span id="calendar_4">
-      <img id="cal_img_4" class="datepicker" src="../../img/calendar.gif" alt="Pick a date.">  
+      <img id="cal_img_4" class="datepicker" src="img/calendar.gif" alt="Pick a date.">   
     </span>
     <script type="text/javascript">
       Calendar.setup({
@@ -283,38 +283,20 @@
                         <textarea cols="50" rows="4" name="notes" class="form-control" placeholder="Notas"/></textarea>
                     </div>
                 </div>
-                                        </div>
+                                        </div><!--modal body-->
                                         <div class="modal-footer">
-                <div class="footer">   
-                   
-                    <button type="submit" class="btn bg-olive btn-block" value="next">Agregar otro Medicamento</button>
-
-
-                    <button type="submit" class="btn bg-olive btn-block" value="send" >Enviar</button>
-                                            </div>
-                </div>
-            </form>
-                </div>
+                                            <button type="submit" class="btn btn-primary btn-block" value="next">Agregar otro Medicamento</button>
+                                            <button type="submit" class="btn btn-primary btn-block" value="send" >Enviar</button>      
+                                                </div> <!--modal--footer-->
+                                        </div> <!--modal content-->
                                            
-                                        </div>
-                                    </div>
-                                </div>    
-                        </div><!-- /.col -->
-                    </div>
-                    <!-- /.row -->
+                                    </div> <!--modal dialog-->
+                        </div><!--Modal-->
+                    </div><!-- /.col -->
 
-                    <!-- Main row -->
-                    <div class="row">
-                        <!-- Left col -->
-                        <section class="col-lg-6 connectedSortable">
-
-                        </section><!-- /.Left col -->
-                        <!-- right col (We are only adding the ID to make the widgets sortable)-->
-                        <section class="col-lg-6 connectedSortable">
-
-                </section><!-- /.content -->
+                </section>
+                       
             </aside><!-- /.right-side -->
-        </div><!-- ./wrapper -->
 
         <!-- add new calendar event modal -->
 

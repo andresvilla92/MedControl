@@ -16,3 +16,20 @@
     padding:20px;  
     line-height: 20px;
 }
+.header{
+    font-family: Trebuschet MS, sans-serif;
+    font-weight: bold; 
+    font-size: 30px;
+    text-align: center;
+}
+.modal-header{
+    background-color:cornflowerblue;
+    color:white;
+    
+}
+.modal fade{
+    margin: 25px;  
+}
+.form-group{
+    padding: 10px;
+}
