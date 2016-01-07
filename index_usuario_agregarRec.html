@@ -184,7 +184,8 @@
                     <!-- top row -->
                     <div class="row">
                         <div class="col-xs-12 connectedSortable">
-                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Nueva Receta  &nbsp; <i class="fa fa-plus"></i></button>
+                                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal"> Nueva Receta  &nbsp; <i class="fa fa-plus"></i></button>
+                                
                             <!--Modal-->
                             <div id="myModal" class="modal fade" role="dialog">
                                 <div class="modal-dialog">}
@@ -299,7 +300,16 @@
                          <div class="box box-solid">
                                 <div class="box-header">
                                     <h3 class="box-title">Recetas registradas</h3>
+                                     <div class="box-tools">
+                                        <div class="input-group">
+                                            <input type="text" name="table_search" class="form-control input-sm pull-right" style="width: 150px;" placeholder="Buscar"/>
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-sm btn-default"><i class="fa fa-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div><!-- /.box-header -->
+   
                                 <div class="box-body">
                                     <div class="box-group" id="accordion">
                                         <!-- we are adding the .panel class so bootstrap.js collapse plugin detects it -->
@@ -313,21 +323,56 @@
                                             </div>
                                             <div id="collapseOne" class="panel-collapse collapse in">
                                                 <div class="box-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Fecha de inicio:</dt>
+                                                        <dd> 20/11/1995</dd>
+                                                        <dt>Fecha final:</dt>
+                                                        <dd> 30/03/1996</dd>
+                                                        <dt>Doctor:</dt>
+                                                        <dd>Ignacio Lora</dd>
+                                                        <dt>Medicamento:</dt>
+                                                        <dd>Fitoestimulina</dd>
+                                                        <dt>Activo(s):</dt>
+                                                        <dd>Triticum vulgare</dd>
+                                                        <dt>Vía:</dt>
+                                                        <dd>Aplicación directa</dd>
+                                                        <dt>Efectos advesos:</dt>
+                                                        <dd>Infección si no se limpia completamente</dd>
+                                                        <dt>Notas:</dt>
+                                                        <dd> </dd>
+                                                    </dl>
                                                 </div>
+
                                             </div>
                                         </div>
                                         <div class="panel box box-danger">
                                             <div class="box-header">
                                                 <h4 class="box-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                                                        Collapsible Group Danger
+                                                        <span class="label label-danger">13/04/2000</span>
                                                     </a>
                                                 </h4>
                                             </div>
                                             <div id="collapseTwo" class="panel-collapse collapse">
                                                 <div class="box-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                   <dl class="dl-horizontal">
+                                                        <dt>Fecha de inicio:</dt>
+                                                        <dd> 13/04/2000</dd>
+                                                        <dt>Fecha final:</dt>
+                                                        <dd> 30/04/2000</dd>
+                                                        <dt>Doctor:</dt>
+                                                        <dd>Thalia Mane</dd>
+                                                        <dt>Medicamento:</dt>
+                                                        <dd>Hierro</dd>
+                                                       <dt>Activo(s):</dt>
+                                                        <dd>Hierro</dd>
+                                                        <dt>Vía:</dt>
+                                                        <dd>Inyección</dd>
+                                                        <dt>Efectos advesos:</dt>
+                                                        <dd>Hemosiderosis</dd>
+                                                        <dt>Notas:</dt>
+                                                        <dd>Se debe tener cuidado al aplicar la inyección para evitar manchas en la piel.</dd>
+                                                    </dl>
                                                 </div>
                                             </div>
                                         </div>
@@ -335,13 +380,30 @@
                                             <div class="box-header">
                                                 <h4 class="box-title">
                                                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-                                                        Collapsible Group Success
+                                                        <span class="label label-success">25/06/2001</span>
                                                     </a>
                                                 </h4>
                                             </div>
                                             <div id="collapseThree" class="panel-collapse collapse">
                                                 <div class="box-body">
-                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                                    <dl class="dl-horizontal">
+                                                        <dt>Fecha de inicio:</dt>
+                                                        <dd> 25/06/2001</dd>
+                                                        <dt>Fecha final:</dt>
+                                                        <dd> 30/08/2001</dd>
+                                                        <dt>Doctor:</dt>
+                                                        <dd>José Manzanares</dd>
+                                                        <dt>Medicamento:</dt>
+                                                        <dd>Excedrin</dd>
+                                                        <dt>Activo(s):</dt>
+                                                        <dd>Acetaminophea</dd>
+                                                        <dt>Vía:</dt>
+                                                        <dd>Pastilla tomada</dd>
+                                                        <dt>Efectos advesos:</dt>
+                                                        <dd>Adelgazamiento de la sangre</dd>
+                                                        <dt>Notas:</dt>
+                                                        <dd>No se debe tomar más de lo recetado par aevitar efectos adversos.</dd>
+                                                    </dl>
                                                 </div>
                                             </div>
                                         </div>
