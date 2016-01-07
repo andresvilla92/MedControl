@@ -1,0 +1,18 @@
+.nav-justified{
+    font-family: Trebuchet MS, sans-serif;
+    font-weight: bold;
+}
+.box-title{
+    font-family: Trebuchet MS, sans-serif; 
+    font-weight: bold; 
+    font-size:20px;
+    
+}
+.Para{
+    font-family: Trebuchet MS, sans-serif; 
+}
+
+.box-info{
+    padding:20px;  
+    line-height: 20px;
+}

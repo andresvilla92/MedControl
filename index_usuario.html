@@ -22,6 +22,8 @@
         <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <!-- Personal stylesheet -->
+        <link href="css/usuario.css" rel="stylesheet" type="text/css" />
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -139,13 +141,23 @@
                         </li>
                         <li>
                             <a href= "index_usuario_historial.html">
-                                <i class="fa fa-th"></i> <span>Historial</span> <small class="badge pull-right bg-green">new</small>
+                                <i class="fa fa-archive"></i> <span>Historial</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href= "index_usuario_historial.html">
+                                <i class="fa fa-user-md"></i> <span>Consultar Doctor</span> 
+                            </a>
+                        </li>
+                        <li>
+                            <a href= "index_usuario_historial.html">
+                                <i class="fa fa-plus"></i> <span>Agregar Receta</span> 
                             </a>
                         </li>
                         <li>
                             <a href="pages/calendar.html">
                                 <i class="fa fa-calendar"></i> <span>Calendario</span>
-                                <small class="badge pull-right bg-red">3</small>
+                               
                             </a>
                         </li>
                     </ul>
@@ -157,7 +169,7 @@
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
                     <h1>
-                        Usuario
+                        Francisco Omaña
                         <small>Control de Medicamentos</small>
                     </h1>
                     <ol class="breadcrumb">
@@ -171,7 +183,6 @@
                     <!-- top row -->
                     <div class="row">
                         <div class="col-xs-12 connectedSortable">
-                            
                         </div><!-- /.col -->
                     </div>
                     <!-- /.row -->
@@ -180,27 +191,17 @@
                     <div class="row">
                         <!-- Left col -->
                         <section class="col-lg-6 connectedSortable"> 
-                                
-                            <!-- Custom tabs (Charts with tabs)-->
-                            <div class="nav-tabs-custom">
-                                
-                                <!-- Tabs within a box -->
-                                <ul class="nav nav-tabs pull-right">
-                                    <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-                                    <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
-                                    <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
-                                </ul>
-                                <div class="tab-content no-padding">
-                                    <!-- Morris chart - Sales -->
-                                    <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-                                    <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
+                            <div class="box box-info" >
+                                <div class="box-header">
+                                    <h1 class="box-title">Sobre Medi-Rec...</h1>
                                 </div>
-                            </div><!-- /.nav-tabs-custom -->
-                                                
+                                <p class="Para"> <h4>Medi-Rec ayudará a tener un mejor control de los medicamentos que se deben tomar. Su fácil uso permitirá tanto al usuario como a su doctor consultar un historial de las medicinas recetadas.</h4> </p>
+                            </div> 
                         </section><!-- /.Left col -->
                         <!-- right col (We are only adding the ID to make the widgets sortable)-->
                         <section class="col-lg-6 connectedSortable">
-
+                            <div class="box box-info">    
+                                    <img src="img/med_1.png" class="img-responsive" alt="Medicinas">
                 </section><!-- /.content -->
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
