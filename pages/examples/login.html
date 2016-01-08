@@ -1,8 +1,21 @@
 <!DOCTYPE html>
 <html class="bg-black">
     <head>
+         <?php 
+            $servername= "local"; 
+            $username= "root";
+            $password= "isabel007"; 
+            $dbname= "moverviejitosdb";
+
+            $conn = mysqli_connect($servername, $username, $password, $dbname);  
+            if(!$conn){
+                die("Connection failed: " .mysqli_connect_error());
+            }
+            echo "Connected succesfully";
+          
+?>
         <meta charset="UTF-8">
-        <title>AdminLTE | Ingresar</title>
+        <title>Medi-Rec| Ingresar</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
