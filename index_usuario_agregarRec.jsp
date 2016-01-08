@@ -244,15 +244,15 @@
 <div class="form-group">
     <label class="description"  style="color:#909090;" for="element_4">Fecha de Fin </label>
     <span>
-      <input id="element_4_1" name="element_4_1" class="element text" size="2" maxlength="2" value="" type="text"> /
+      <input id="element_4_1" name="element_4_4" class="element text" size="2" maxlength="2" value="" type="text"> /
       <label for="element_4_1" style="color:#909090;">DD</label>
     </span>
     <span>
-      <input id="element_4_2" name="element_4_2" class="element text" size="2" maxlength="2" value="" type="text"> /
+      <input id="element_4_2" name="element_4_5" class="element text" size="2" maxlength="2" value="" type="text"> /
       <label for="element_4_2" style="color:#909090;">MM</label>
     </span>
     <span>
-      <input id="element_4_3" name="element_4_3" class="element text" size="4" maxlength="4" value="" type="text">
+      <input id="element_4_3" name="element_4_6" class="element text" size="4" maxlength="4" value="" type="text">
       <label for="element_4_3" style="color:#909090;">YYYY</label>
     </span>
   
@@ -277,7 +277,7 @@
                 </span>
                 <span>
                     <div class="form-group">
-                        <input type="text" name="dosis" size="11" maxlength="7"  placeholder="Horas"/>
+                        <input type="text" name="dosis1" size="11" maxlength="7"  placeholder="Horas"/>
                     </div> 
                     </span>
                     <div class="form-group">
@@ -291,7 +291,36 @@
                                         </div><!--modal body-->
                                         <div class="modal-footer">
                                             <button type="submit" class="btn btn-primary btn-block" value="next">Agregar otro Medicamento</button>
-                                            <button type="submit" class="btn btn-primary btn-block" value="send" >Enviar</button>      
+                                            
+                <c:if test="${empty param.patente or empty param.activo or empty param.Via or empty param.element_4_1 or empty param.element_4_2 or empty param.element_4_3 or empty param.dosis or empty param.efectos or empty param.notes}">
+                    <script>
+                        alert("No introdujeron todos los datos");
+                    </script>      
+                </c:if>
+                                            <button type="submit" class="btn btn-primary btn-block" value="send" >Enviar</button>
+                <c:if test="${not empty param.patente and not empty param.activo and not empty param.Via and not empty param.element_4_1 and not empty param.element_4_2 and not empty param.element_4_3 and not empty param.dosis and not empty param.efectos and not empty param.notes}">
+            <sql:update var="medi" dataSource="${con}">
+                INSERT INTO Medicamento(Patente, Activos, Mg) VALUES (?,?,?)
+                <sql:param value="${param.patente}"/>
+                <sql:param value:"${param.activo}"/>
+                <sql:param value: 0 />
+            </sql:update>       
+            <sql:update var="medi1" dataSource="${con}">
+                INSERT INTO Receta(fecha_inicio, fecha_final, Via, Efectos_Adversos, Notas) VALUES (?,?,?,?,?)
+                <sql:param value="${param.element_4_1}"/"${param.element_4_2}"/ "${param.element_4_3}"/>
+                <sql:param value="${param.element_4_4}"/"${param.element_4_5}"/"${param.element_4_6}"/>
+                <sql:param value="${param.Via}"/>
+                <sql:param value="${param.efectos}"/>
+                <sql:param value"${param.notes}"/>
+            </sql:update>
+            <sql:update var="med2" dataSource="${con}">
+                INSERT INTO Dosis(num_pas, Tiempo) VALUES (?,?)
+                    <sql:param value= "${param.dosis}"/>
+                    <sql:param value="${param.dosis1}"/>
+            </sql:update>
+            <script> alert("Receta agregada");
+            </script>
+            </c:if>
                                                 </div> <!--modal--footer-->
                                         </div> <!--modal content-->
                                            
@@ -300,11 +329,7 @@
                     </div><!-- /.col -->
                 </section>
             
-                <c:if test="${empty param.patente or empty param.activo or empty param.Via or empty param.element_4_1 or empty param.element_4_2 or empty param.element_4_3 or empty param.dosis or empty param.efectos or empty param.notes}">
-                    <script>
-                        alert("No introdujeron todos los datos");
-                    </script>      
-                </c:if>
+                
                 
                 <section class="col-lg-12 connectedSortable">
                     <div class="box box-primary">
