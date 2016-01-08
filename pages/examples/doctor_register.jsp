@@ -6,7 +6,7 @@
     <head>
         <sql:setDataSource driver="com.mysql.jdbc.Driver" var="con" url="jdbc:mysql://localhost:3306/fragilidad?zeroDateTimeBehavior=convertToNull" user="root" password="81092" ></sql:setDataSource>
         <meta charset="UTF-8">
-        <title>AdminLTE | Registro</title>
+        <title>Doctor | Registro</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -60,6 +60,7 @@
                     <a href="login.html" class="text-center">Ya tengo cuenta</a>
                 </div>
             </form>
+            
             <c:if test= "${pageContext.request.method=='POST'}">
         <c:choose>
     <c:when test="${param.password==param.password2}">
