@@ -32,6 +32,15 @@
                         <input type="text" name="activo" class="form-control" placeholder="Sustancia Activa"/>
                     </div> 
                     <div class="form-group">
+                        <label  style="color:#909090;" for="presentacion">Presentación:  </label>
+                        <input type="text" name="presentacion" size="4" maxlength="4" placeholder="#"/>
+                        <select class="btn btn-success btn-flat dropdown-toggle">
+  <option value="mg">mg</option>
+  <option value="mcg">mcg</option>
+  <option value="gr">gr</option>
+</select>
+                    </div> 
+                    <div class="form-group">
                         <input type="text" name="Via" class="form-control" placeholder="Vía"/>
                     </div>
                     <div class="form-group">
@@ -95,14 +104,21 @@
 </div>  
                     <span>
                     <div class="form-group">
-                        <input type="text" name="dosis" size="11" maxlength="7"  placeholder="# de Pastillas"/>
+                        <select class="btn btn-success btn-flat dropdown-toggle">
+  <option value="default">Dosis</option>
+  <option value=".25">1/4 (un cuarto)</option>
+  <option value=".5">1/2 (media)</option>
+  <option value=".5">3/4 (tres cuartos)</option>  
+  <option value="1">1</option>
+  <option value="1.5">1.5 (una y media)</option>
+  <option value="2">2</option>
+  <option value="2.5">2.5 (dos y media)</option>
+  <option value="3">3</option>
+</select>
+<label  style="color:#909090;" for="dosis">Cada:  </label>
+    <input type="text" name="dosis" size="11" maxlength="7"  placeholder="Hora/Dias"/>
                     </div> 
                 </span>
-                <span>
-                    <div class="form-group">
-                        <input type="text" name="dosis" size="11" maxlength="7"  placeholder="Horas"/>
-                    </div> 
-                    </span>
                     <div class="form-group">
                         <textarea cols="50" rows="4" name="efectos" class="form-control" placeholder="Posibles Efectos Adversos"/></textarea>
 
@@ -139,7 +155,7 @@
                     <button type="submit" class="btn bg-olive btn-block" value="next">Agregar otro Medicamento</button>
 
 
-                    <button type="submit" class="btn bg-olive btn-block" value="send" >Enviar</button>
+                    <button type="submit" class="btn bg-olive btn-block" value="send" >Guardar</button>
                 </div>
             </form>
 
