@@ -1,6 +1,10 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <!DOCTYPE html>
 <html class="bg-black">
     <head>
+        <sql:setDataSource driver="com.mysql.jdbc.Driver" var="con" url="jdbc:mysql://localhost:3306/fragilidad?zeroDateTimeBehavior=convertToNull" user="root" password="81092" ></sql:setDataSource>
         <meta charset="UTF-8">
         <title>AdminLTE | Registro</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
@@ -56,7 +60,31 @@
                     <a href="login.html" class="text-center">Ya tengo cuenta</a>
                 </div>
             </form>
-
+            <c:if test= "${pageContext.request.method=='POST'}">
+        <c:choose>
+    <c:when test="${param.contrasena==param.contrasena2}">
+        <c:set var="birth" value="${param.year}/${param.month}/${param.day}"></c:set>
+        <sql:update var="res" dataSource="${con}">
+            INSERT INTO Doctor(nombre,especialidad,fecha_nacimiento,sexo,telefono,mail,contrasena) VALUES (?,?,?,?,?,?,?)
+            <sql:param value="${param.nombre}" />
+            <sql:param value="${param.especialidad}" />
+            <sql:param value="${birth}" />
+            <sql:param value="${param.Sexo}" />
+            <sql:param value="${param.telefono}" />
+            <sql:param value="${param.mail}" />
+            <sql:param value="${param.contrasena}" />
+        </sql:update>. 
+        <script>
+                alert("Doctor agregado con exito");
+        </script> 
+    </c:when>    
+    <c:otherwise>
+<script>
+    alert("Datos incopletos o incorrectos");
+</script> 
+    </c:otherwise>
+</c:choose>
+</c:if>
             <div class="margin text-center">
                 <span>Registrate con:</span>
                 <br/>
