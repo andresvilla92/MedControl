@@ -1,11 +1,35 @@
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!--<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>-->
     <!DOCTYPE html>
 <html>
     <head>
-        <sql:setDataSource var="con" driver="com.mysql.jbc.Driver" url="jdbc:mysql://localhost:3306/?user=root" password= "isabel007"/>
+        <!--<sql:setDataSource var="con" driver="com.mysql.jbc.Driver" url="jdbc:mysql://localhost:3306/?user=root" password= "isabel007"/>-->
+        <?php 
+            $servername= "localhost"; 
+            $username= "root";
+            $password= "isabel007"; 
+            $dbname= "moverviejitosdb";
+            
+            $conn= new mysqli($servername, $username. $password, $dbname);
+        
+        if(!$conn){
+            die("Connection failed: " .mysqli_connect_error()); 
+        }
+        echo "Connected successfully";
+        
+        $sql = "SELECT Nombre, Apellidos FROM Doctor";
+        $result = mysqli_query ($conn, $sql);
+
+        if(mysqli_num_rows($result) > 0){
+            while ($row = mysqli_fetch_assoc($result)){
+                echo "Nombre:  ". $row["Nombre"]. " -<br>"; Apellidos: ". $row["Apellidos"]."
+        } else{
+            echo "0 results";
+        }
+        mysqli_close($conn);
+?>
         
         <meta charset="UTF-8">
         <title>Francisco | Principal </title>
