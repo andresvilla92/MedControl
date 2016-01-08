@@ -1,11 +1,11 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-    <%@taglib pregix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql"%>
     <!DOCTYPE html>
 <html>
     <head>
-        <sql:setDataSource var="con" driver="com.mysql.jbc.Driver" url="jdbc:mysql://localhost/MoverViejitosdb" user= "root" password= "isabel007"/>
+        <sql:setDataSource var="con" driver="com.mysql.jbc.Driver" url="jdbc:mysql://localhost:3306/?user=root" password= "isabel007"/>
         
         <meta charset="UTF-8">
         <title>Francisco | Principal </title>
@@ -248,3 +248,14 @@
 
     </body>
 </html>
+
+        
+        <!--<c:if test="${pageContext.request.method=='POST'}">
+      <c:choose> 
+        <c:when test="${param.contraseña==param.contraseña2]">
+        <sql:update var= "res" dataSource="&{con}">
+    INSERT INTO Doctorsjdkdnksf]VALUE(?,?,?)
+    <sql:param value= "&{param.nombre}"/>
+        </sql:update>
+        </c:when>
+        </c:if>-->
